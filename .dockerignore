@@ -1,0 +1,5 @@
+.vscode
+.golangci.yaml
+Makefile
+README.md
+*.db
