@@ -14,7 +14,7 @@ output:
   # Example: "checkstyle:report.json,colored-line-number"
   #
   # Default: colored-line-number
-  format: json
+  format:
   print-issued-lines: true
   print-linter-name: false
   uniq-by-line: false
@@ -23,9 +23,9 @@ output:
 linters:
   fast: true
   enable:
+    - revive
     - asciicheck
     - errcheck
-    - deadcode
     - staticcheck
     - bodyclose
     - gosimple
@@ -36,14 +36,13 @@ linters:
     - wrapcheck
     - typecheck
     - nonamedreturns
-    - nosnakecase
     - ineffassign
     - goconst
     - godot
     - gofmt
     - goimports
-    - structcheck
     - funlen
+    - unused
 
 linters-settings:
   funlen:

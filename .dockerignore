@@ -1,0 +1,6 @@
+.vscode
+.idea/
+.golangci.yaml
+Makefile
+README.md
+*.db

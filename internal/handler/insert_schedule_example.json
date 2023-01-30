@@ -1,0 +1,23 @@
+[
+  {
+    "title": "My Schedule",
+    "day_of_week": 2,
+    "created_by": -132132900989998890,
+    "subjects": [
+      {
+        "title": "Maths",
+        "start_time": "10:00+01",
+        "end_time": "11:00+01",
+        "teachers": [
+          {
+            "name": "Mr. Smith",
+            "conference": {
+              "identifier": "232313123213",
+              "password": "1234qwe"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
