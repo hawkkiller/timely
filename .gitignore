@@ -1,2 +1,7 @@
 .idea
 .vscode
+# store secrets
+*.env
+litestream.yml
+# blob storage
+*.db

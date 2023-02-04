@@ -8,7 +8,7 @@ import (
 )
 
 func Connect() (*gorm.DB, error) {
-	conn, err := gorm.Open(sqlite.Open("timely.db"))
+	conn, err := gorm.Open(sqlite.Open("timelydb/timely.db"))
 	if err != nil {
 		return nil, errors.Wrap(err, "failed to open database")
 	}
