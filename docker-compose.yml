@@ -1,0 +1,29 @@
+version: '3.7'
+
+services:
+  timely:
+    image: timely/timely:latest
+    depends_on:
+      - litestream
+    build:
+      context: .
+      dockerfile: dockerfiles/Dockerfile
+    networks:
+      - timely
+    environment:
+      - TELEGRAM_TOKEN=${TELEGRAM_TOKEN}
+    volumes:
+      - timely_data:/timelydb
+  litestream:
+    image: litestream/litestream:latest
+    volumes:
+      - ./litestream.yml:/etc/litestream.yml
+      - timely_data:/data
+    networks:
+      - timely
+    command: replicate
+networks:
+    timely:
+        driver: bridge
+volumes:
+    timely_data:
