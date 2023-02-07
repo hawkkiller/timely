@@ -16,12 +16,15 @@ services:
       - timely_data:/timelydb
   litestream:
     image: litestream/litestream:latest
+    command: replicate ./data/timely.db s3://timely-backup/timely.db
     volumes:
-      - ./litestream.yml:/etc/litestream.yml
       - timely_data:/data
     networks:
       - timely
-    command: replicate
+    environment:
+      - AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}
+      - AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}
+
 networks:
     timely:
         driver: bridge
