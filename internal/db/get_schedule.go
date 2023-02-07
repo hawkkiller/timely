@@ -5,6 +5,6 @@ import (
 	"github.com/mymmrac/telego"
 )
 
-func (s scheduleDB) GetSchedule(chatID telego.ChatID) *model.Schedule {
+func (db scheduleDB) GetSchedule(chatID telego.ChatID) *model.Schedule {
 	panic("unimplemented")
 }

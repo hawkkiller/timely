@@ -7,7 +7,7 @@ import (
 )
 
 type ScheduleDB interface {
-	InsertSchedule(schedule *model.ScheduleInsertDTO)
+	InsertSchedule(schedule *model.Schedule) error
 	GetSchedule(chatID telego.ChatID) *model.Schedule
 }
 
